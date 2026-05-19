@@ -8,6 +8,15 @@
 \description{
 More about what it does (maybe more than one line). Continuation lines should be indented.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/nicholasdavies/emerge}
+  \item \url{https://nicholasdavies.github.io/emerge/}
+  \item Report bugs at \url{https://github.com/nicholasdavies/emerge/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Jane Doe \email{jane@example.com}
 
