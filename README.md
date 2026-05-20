@@ -6,22 +6,6 @@
 [![Codecov test coverage](https://codecov.io/gh/nicholasdavies/emerge/graph/badge.svg)](https://app.codecov.io/gh/nicholasdavies/emerge)
 <!-- badges: end -->
 
-The goal of emerge is to ...
+This is a work-in-progress analysis of the 2026 Bundibugyo outbreak centered on Ituri, DRC.
 
-## Installation
-
-You can install the development version of emerge like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(emerge)
-## basic example code
-```
-
+This is still undergoing quality assurance and should not be used for any purpose.

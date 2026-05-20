@@ -5,18 +5,25 @@
 #include "cpp11/declarations.hpp"
 #include <R_ext/Visibility.h>
 
-// code.cpp
-void fun();
-extern "C" SEXP _emerge_fun() {
+// gaussian.cpp
+cpp11::doubles random_Rt_m32(int n, double mu, double sigma, double ell, unsigned int seed);
+extern "C" SEXP _emerge_random_Rt_m32(SEXP n, SEXP mu, SEXP sigma, SEXP ell, SEXP seed) {
   BEGIN_CPP11
-    fun();
-    return R_NilValue;
+    return cpp11::as_sexp(random_Rt_m32(cpp11::as_cpp<cpp11::decay_t<int>>(n), cpp11::as_cpp<cpp11::decay_t<double>>(mu), cpp11::as_cpp<cpp11::decay_t<double>>(sigma), cpp11::as_cpp<cpp11::decay_t<double>>(ell), cpp11::as_cpp<cpp11::decay_t<unsigned int>>(seed)));
+  END_CPP11
+}
+// sim_emergence.cpp
+cpp11::data_frame simulate_emergence(cpp11::doubles R, double k, cpp11::doubles generation_cdf, cpp11::list outcome_cdfs, unsigned int seed);
+extern "C" SEXP _emerge_simulate_emergence(SEXP R, SEXP k, SEXP generation_cdf, SEXP outcome_cdfs, SEXP seed) {
+  BEGIN_CPP11
+    return cpp11::as_sexp(simulate_emergence(cpp11::as_cpp<cpp11::decay_t<cpp11::doubles>>(R), cpp11::as_cpp<cpp11::decay_t<double>>(k), cpp11::as_cpp<cpp11::decay_t<cpp11::doubles>>(generation_cdf), cpp11::as_cpp<cpp11::decay_t<cpp11::list>>(outcome_cdfs), cpp11::as_cpp<cpp11::decay_t<unsigned int>>(seed)));
   END_CPP11
 }
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
-    {"_emerge_fun", (DL_FUNC) &_emerge_fun, 0},
+    {"_emerge_random_Rt_m32",      (DL_FUNC) &_emerge_random_Rt_m32,      5},
+    {"_emerge_simulate_emergence", (DL_FUNC) &_emerge_simulate_emergence, 5},
     {NULL, NULL, 0}
 };
 }

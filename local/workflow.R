@@ -31,7 +31,7 @@ usethis::use_cpp11()
 
 # ADDING ELEMENTS
 # Import package
-# usethis::use_package("rlang")
+usethis::use_package("mvtnorm")
 
 # Add vignette
 usethis::use_vignette("benchmarks")
