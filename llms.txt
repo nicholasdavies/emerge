@@ -1,5 +1,7 @@
 # emerge
 
+## DO NOT USE THIS
+
 This is a work-in-progress analysis of the 2026 Bundibugyo outbreak
 centered on Ituri, DRC.
 
@@ -10,8 +12,6 @@ any purpose.
 
 ## All functions
 
-- [`hello()`](https://nicholasdavies.github.io/emerge/reference/hello.md)
-  : Hello, World!
 - [`random_Rt_expq()`](https://nicholasdavies.github.io/emerge/reference/random_Rt_expq.md)
   : Get a random Rt series
 

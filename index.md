@@ -1,5 +1,7 @@
 # emerge
 
+## DO NOT USE THIS
+
 This is a work-in-progress analysis of the 2026 Bundibugyo outbreak
 centered on Ituri, DRC.
 
