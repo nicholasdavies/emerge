@@ -2,10 +2,24 @@
 % Please edit documentation in R/gaussian.R
 \name{random_Rt_expq}
 \alias{random_Rt_expq}
-\title{Get a random Rt series}
+\title{Random R(t) series from an exponentiated-quadratic Gaussian process}
 \usage{
 random_Rt_expq(n, mu, spread, scale)
 }
+\arguments{
+\item{n}{Number of time points in the returned series.}
+
+\item{mu}{Median of R(t).}
+
+\item{spread}{Standard deviation of \code{log(R(t)/mu)}. Approximates the
+coefficient of variation of R(t) when small.}
+
+\item{scale}{Inverse length scale: smaller \code{scale} gives smoother R(t),
+larger \code{scale} gives a rougher trajectory.}
+}
+\value{
+Numeric vector of length \code{n} containing R(t).
+}
 \description{
-Get a random Rt series
+Random R(t) series from an exponentiated-quadratic Gaussian process
 }
