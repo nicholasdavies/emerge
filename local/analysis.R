@@ -15,7 +15,7 @@ Death_delay = pgamma(0:40, shape = 4.42, rate = 0.388)
 Death_delay = Death_delay / max(Death_delay)
 gen_shape = 2.71  # WHO Ebola Response Team 2014 (NEJM): SI mean 15.3, SD 9.3
 gen_rate  = 0.177
-Generation_delay = pgamma(0:40, shape = gen_shape, rate = gen_rate)
+Generation_delay = pgamma(0:80, shape = gen_shape, rate = gen_rate)
 Generation_delay = Generation_delay / max(Generation_delay)
 
 # Median R(t) from a doubling time via the discrete Euler-Lotka equation:
