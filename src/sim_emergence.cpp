@@ -26,7 +26,7 @@ cpp11::data_frame simulate_emergence(cpp11::doubles R, double k,
         if (!std::isfinite(lambda))
             cpp11::stop("Non-finite lambda in secondary_dist().");
 
-        // Above ~1e6, use normal approximation
+        // Above lambda = 1e6, use normal approximation
         if (lambda < 1e6)
             return std::poisson_distribution<size_t>(lambda)(e);
         double x = std::normal_distribution<double>(lambda, std::sqrt(lambda))(e);
